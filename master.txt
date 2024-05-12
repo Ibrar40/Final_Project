@@ -70,3 +70,47 @@ void addStudentToClassroom() {
 	        cout << "Student " << studentName << " added to classroom " << classroomName << " successfully." << endl;
 	    }
 	
+
+  void addFeeForStudent() {
+	        string studentName;
+	        int amount;
+	        cout << "Enter student's name: ";
+	        cin >> studentName;
+	        cout << "Enter fee amount: ";
+	        cin >> amount;
+	        
+	        cout << "Fee added successfully for student " << studentName << ": $" << amount << endl;
+	    }
+	
+	    void uploadHomework() {
+	        string homeworkName;
+	        cout << "Enter homework name: ";
+	        cin >> homeworkName;
+	        
+	        cout << "Homework '" << homeworkName << "' uploaded successfully." << endl;
+	    }
+	
+	    void markAssessment() {
+	        string assessmentName;
+	        cout << "Enter assessment name: ";
+	        cin >> assessmentName;
+	        
+	        cout << "Assessment '" << assessmentName << "' marked successfully." << endl;
+	    }
+	
+	    void sendNotificationToParents() {
+	        string notification;
+	        cout << "Enter notification message: ";
+	        cin.ignore();
+	        getline(cin, notification);
+	        
+	        cout << "Notification sent to parents: " << notification << endl;
+	    }
+void createEvent() {
+	        string eventName, eventDate;
+	        cout << "Enter event name: ";
+	        cin >> eventName;
+	        cout << "Enter event date: ";
+	        cin >> eventDate;
+	        cout << "Event '" << eventName << "' created successfully on " << eventDate << "." << endl;
+	    }
