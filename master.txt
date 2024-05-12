@@ -114,3 +114,77 @@ void createEvent() {
 	        cin >> eventDate;
 	        cout << "Event '" << eventName << "' created successfully on " << eventDate << "." << endl;
 	    }
+ void displayAllUsers() {
+	        cout << "All registered users:" << endl;
+	        for (int i = 0; i < numUsers; i++) {
+	            cout << "Username: " << users[i].getUsername() << endl;
+	            cout << "Role: " << users[i].getRole() << endl;
+	            cout << "Email: " << users[i].getEmail() << endl;
+	            cout << "-----------------------" << endl;
+	        }
+	    }
+	};
+int main() {
+	    UserManagement userManagement;
+	    int choice;
+	    while (true) {
+	        cout << "Menu:" << endl;
+	        cout << "1. Register user" << endl;
+	        cout << "2. Login" << endl;
+	        cout << "3. Add student to classroom" << endl;
+	        cout << "4. Add fee for student" << endl;
+	        cout << "5. Upload homework" << endl;
+	        cout << "6. Mark assessment" << endl;
+	        cout << "7. Send notification to parents" << endl;
+	        cout << "8. Create event" << endl;
+	        cout << "9. Display all users" << endl;
+	        cout << "10. Logout" << endl;
+	        cout << "11. Exit" << endl;
+	        cout << "Enter your choice: ";
+	        cin >> choice;
+	        switch (choice) {
+	            case 1:
+	                userManagement.registerUser();
+	                break;
+	            case 2:
+	                {
+	                    User* loggedInUser = userManagement.loginUser();
+	                    if (loggedInUser != nullptr) {
+	                        cout << "Logged in as: " << loggedInUser->getUsername() << endl;
+	                    } else {
+	                        cout << "Invalid username or password." << endl;
+	                    }
+	                }
+	                break;
+	            case 3:
+	                userManagement.addStudentToClassroom();
+	                break;
+	            case 4:
+	                userManagement.addFeeForStudent();
+	                break;
+	            case 5:
+	                userManagement.uploadHomework();
+	                break;
+	            case 6:
+	                userManagement.markAssessment();
+	                break;
+	            case 7:
+	                userManagement.sendNotificationToParents();
+	                break;
+	            case 8:
+	                userManagement.createEvent();
+	                break;
+	            case 9:
+	                userManagement.displayAllUsers();
+	                break;
+	            case 10:
+	                cout << "Logged out." << endl;
+	                break;
+	            case 11:
+	                cout << "Exiting..." << endl;
+	                return 0;
+	            default:
+	                cout << "Invalid choice. Please enter a valid option." << endl;
+	        }
+	    }
+	}
