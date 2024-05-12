@@ -59,4 +59,14 @@ class UserManagement {
 	            cout << "User registration failed. Maximum users reached." << endl;
 	        }
 	    }
+//this is my second function
+void addStudentToClassroom() {
+	        string studentName, classroomName;
+	        cout << "Enter student's name: ";
+	        cin >> studentName;
+	        cout << "Enter classroom name: ";
+	        cin >> classroomName;
+	        // Implement logic to add student to the classroom here
+	        cout << "Student " << studentName << " added to classroom " << classroomName << " successfully." << endl;
+	    }
 	
